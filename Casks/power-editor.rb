@@ -1,9 +1,9 @@
 cask "power-editor" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.2.1"
-  sha256 arm:   "e30c78dcc2163b0ab10fa3897622f3fc457a3491f1ed45753d2a4f11ca19bfba",
-         intel: "aab7f0b55b3e3de3fd3d275f0d1a3a1f1a3406e0f018a51600cb86a94c2db241"
+  version "0.2.2"
+  sha256 arm:   "2531f7a211b13600e88c9eea2886cb1f9a1d30f84e4c5bc0abeb7cc49ebc9d5f",
+         intel: "fbce3b461124aa890fc5caa8bad5c2efa196c5a8668baa1ff9b8be7525b6d78b"
 
   url "https://github.com/RaiderWang/power-editor/releases/download/v#{version}/Power.Editor_#{version}_#{arch}.dmg"
   name "Power Editor"
