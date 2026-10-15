@@ -15,14 +15,10 @@ cask "pidesk" do
     strategy :github_latest
   end
 
-  auto_updates true
-
   app "PiDesk.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/PiDesk.app"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/PiDesk.app"]
   end
 
   zap trash: [
