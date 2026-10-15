@@ -1,9 +1,9 @@
 cask "pidesk" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.4.2"
-  sha256 arm:   "5f2b5a2e8e8c4823b3c15d251d9b6abf838f9c1c51aa1f6fc790fbb2653780e6",
-         intel: "c4f4e4536c231f489cfd5b01b246fea6454d59204faf88c8ca2337969c931125"
+  version "0.4.3"
+  sha256 arm:   "01fcce3aef5e094db1b04e56509c955278aad8296714ca086d5ffcee9362441f",
+         intel: "7896829a33935504f747d31662b8b0b5f8751adb5bf7c7b4e7fdd6317d0ac0ca"
 
   url "https://github.com/RaiderWang/pidesk/releases/download/v#{version}/PiDesk_#{version}_#{arch}.dmg"
   name "PiDesk"
