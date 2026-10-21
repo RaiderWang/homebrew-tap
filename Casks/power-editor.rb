@@ -1,9 +1,9 @@
 cask "power-editor" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.2.7"
-  sha256 arm:   "89471c69d495bc1e24ccf3b575e2d620e2a4f90320bde2934ad75dde9512e0c3",
-         intel: "49164634a845c57f73375e9c792ed16b44e531ea13ca9e16be4f430cf5cee297"
+  version "0.2.8"
+  sha256 arm:   "7f5ef0712dd4fe64363d016c053c982a4a07d7c9aa8d552d8741dc57854c62f3",
+         intel: "f43408ab780b9517b9b3e0192229cfb1081ef20f1c22ab3c2d2f68e0f85a2c31"
 
   url "https://github.com/RaiderWang/power-editor/releases/download/v#{version}/Power.Editor_#{version}_#{arch}.dmg"
   name "Power Editor"
@@ -17,8 +17,10 @@ cask "power-editor" do
 
   app "Power Editor.app"
 
-  postflight_steps do
-    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/Power Editor.app"]
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/Power Editor.app"],
+                   sudo: false
   end
 
   zap trash: [
